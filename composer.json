@@ -1,11 +1,11 @@
 {
-  "name": "tochka-developers/document-validator",
+  "name": "imsha/document-validator",
   "description": "Laravel validation for documents codes",
   "license": "MIT",
   "authors": [
     {
-      "name": "Dmitriy Barakovskikh",
-      "email": "hatsune333@gmail.com"
+      "name": "Alex Imsha",
+      "email": "imsha@mail.ru"
     }
   ],
   "require": {
