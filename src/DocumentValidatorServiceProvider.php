@@ -14,14 +14,11 @@ class DocumentValidatorServiceProvider extends ServiceProvider
         $validator->extend('inn', function ($attribute, $value, $parameters) {
             $type = $parameters[0] ?? null;
 
-            switch ($type) {
-                case 'ip':
-                    return DocumentValidator::isInnIp($value);
-                case 'jur':
-                    return DocumentValidator::isInnJur($value);
-                default:
-                    return DocumentValidator::isInn($value);
-            }
+            return match ($type) {
+                'ip' => DocumentValidator::isInnIp($value),
+                'jur' => DocumentValidator::isInnJur($value),
+                default => DocumentValidator::isInn($value),
+            };
 
         });
 
